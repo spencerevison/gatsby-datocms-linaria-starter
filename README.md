@@ -4,10 +4,14 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Gatsby Linaria starter
 </h1>
 
 ## 🚀 Quick start
+
+```shell
+gatsby new <site-name> https://github.com/spencerevison/gatsby-datocms-linaria-starter
+```
 
 1.  **Create a Gatsby site.**
 
