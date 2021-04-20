@@ -17,6 +17,7 @@ module.exports = {
         trackingId: "UA-xxxxxxx-xx",
       },
     },
+    "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",

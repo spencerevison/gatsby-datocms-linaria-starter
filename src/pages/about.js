@@ -3,7 +3,7 @@ import { styled } from "@linaria/react";
 import Layout from "../components/layout";
 
 const Container = styled.div`
-  background: blue;
+  background: var(--color-secondary-500);
 `;
 
 const IndexPage = () => {

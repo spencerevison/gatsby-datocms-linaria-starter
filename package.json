@@ -16,13 +16,17 @@
     "perf": "lighthouse https://projectname.netlify.app/ --budget-path=./budget.json"
   },
   "dependencies": {
+    "@linaria/babel-preset": "^3.0.0-beta.2",
+    "@linaria/core": "^3.0.0-beta.2",
     "@linaria/react": "^3.0.0-beta.2",
+    "@linaria/shaker": "^3.0.0-beta.2",
     "gatsby": "^3.0.0",
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-google-analytics": "^3.3.0",
     "gatsby-plugin-linaria": "^2.2.0",
     "gatsby-plugin-react-helmet": "^4.3.0",
     "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-sass": "^4.3.0",
     "gatsby-plugin-sharp": "^3.3.1",
     "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-source-datocms": "^2.6.11",
@@ -30,14 +34,16 @@
     "gatsby-transformer-remark": "^4.0.0",
     "gatsby-transformer-sharp": "^3.3.0",
     "linaria": "^3.0.0-beta.2",
+    "normalize.css": "^8.0.1",
+    "polished": "^4.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.32.11"
   },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-prettier": "^3.4.0",
