@@ -35,6 +35,8 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-eslint": "^10.1.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-prettier": "^3.4.0",
