@@ -1,0 +1,4 @@
+/images/*
+	Cache-control: max-age=31536000
+/fonts/*
+	Cache-control: max-age=31536000

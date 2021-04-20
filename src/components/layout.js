@@ -1,9 +1,8 @@
 import React from "react";
 
 import "normalize.css";
-import "../styles/main.scss";
-import theme from "../styles/theme";
+import "../styles/global";
 
 export default function Layout({ children }) {
-  return <div className={theme}>{children}</div>;
+  return <div>{children}</div>;
 }

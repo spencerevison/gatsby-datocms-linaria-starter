@@ -1,9 +1,10 @@
 import React from "react";
 import { styled } from "@linaria/react";
 import Layout from "../components/layout";
+import { colors } from "styles/theme";
 
 const Container = styled.div`
-  background: var(--color-secondary-500);
+  background: ${colors.primary200};
 `;
 
 const IndexPage = () => {

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Ritual Motherhood",
-    siteUrl: "https://www.ritualmotherhood.com",
+    title: "Gatsby Linaria Starter",
+    siteUrl: "https://www.gatsbylinaria.com",
   },
   plugins: [
     {
@@ -11,33 +11,22 @@ module.exports = {
       },
     },
     "gatsby-plugin-linaria",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-xxxxxxx-xx",
-      },
-    },
-    "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-alias-imports",
       options: {
-        name: "images",
-        path: "./static/images/",
+        aliases: {
+          components: "src/components",
+          pages: "src/pages",
+          svg: "static/images/svg",
+          "site.config.json": "src/site.config.json",
+          styles: "src/styles",
+        },
       },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
     {
       resolve: "gatsby-plugin-react-svg",
@@ -45,6 +34,17 @@ module.exports = {
         rule: {
           include: /svg/,
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-prefetch-google-fonts",
+      options: {
+        fonts: [
+          {
+            family: "Manrope",
+            variants: ["200", "400", "600", "800"],
+          },
+        ],
       },
     },
   ],

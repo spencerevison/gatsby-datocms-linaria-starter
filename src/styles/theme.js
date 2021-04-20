@@ -1,4 +1,3 @@
-import { css } from "@linaria/core";
 import { lighten, darken } from "polished";
 
 /*-----------------------------------------------------------------------------
@@ -9,71 +8,82 @@ const colorPurple = "#9B63C8";
 const colorPeach = "#F4A5AE";
 const colorPink = "#F5D7E3";
 const colorBlack = "#18191f";
+const colorWhite = "#fff";
 
-/*-----------------------------------------------------------------------------
-  Color mapping
-------------------------------------------------------------------------------*/
 const colorMap = {
   colorPrimary: colorBurgundy,
   colorSecondary: colorPurple,
   colorTertiary: colorPeach,
   colorQuaternary: colorPink,
   colorBlack: colorBlack,
+  colorWhite: colorWhite,
+};
+
+export const colors = {
+  primary900: darken(0.4, colorMap.colorPrimary),
+  primary800: darken(0.3, colorMap.colorPrimary),
+  primary700: darken(0.2, colorMap.colorPrimary),
+  primary600: darken(0.1, colorMap.colorPrimary),
+  primary500: colorMap.colorPrimary,
+  primary400: lighten(0.1, colorMap.colorPrimary),
+  primary300: lighten(0.2, colorMap.colorPrimary),
+  primary200: lighten(0.3, colorMap.colorPrimary),
+  primary100: lighten(0.4, colorMap.colorPrimary),
+
+  secondary900: darken(0.4, colorMap.colorSecondary),
+  secondary800: darken(0.3, colorMap.colorSecondary),
+  secondary700: darken(0.2, colorMap.colorSecondary),
+  secondary600: darken(0.1, colorMap.colorSecondary),
+  secondary500: colorMap.colorSecondary,
+  secondary400: lighten(0.1, colorMap.colorSecondary),
+  secondary300: lighten(0.2, colorMap.colorSecondary),
+  secondary200: lighten(0.3, colorMap.colorSecondary),
+  secondary100: lighten(0.4, colorMap.colorSecondary),
+
+  tertiary900: darken(0.4, colorMap.colorTertiary),
+  tertiary800: darken(0.3, colorMap.colorTertiary),
+  tertiary700: darken(0.2, colorMap.colorTertiary),
+  tertiary600: darken(0.1, colorMap.colorTertiary),
+  tertiary500: colorMap.colorTertiary,
+  tertiary400: lighten(0.1, colorMap.colorTertiary),
+  tertiary300: lighten(0.2, colorMap.colorTertiary),
+  tertiary200: lighten(0.3, colorMap.colorTertiary),
+  tertiary100: lighten(0.4, colorMap.colorTertiary),
+
+  quaternary900: lighten(0.4, colorMap.colorQuaternary),
+  quaternary800: lighten(0.3, colorMap.colorQuaternary),
+  quaternary700: lighten(0.2, colorMap.colorQuaternary),
+  quaternary600: lighten(0.1, colorMap.colorQuaternary),
+  quaternary500: colorMap.colorQuaternary,
+  quaternary400: darken(0.1, colorMap.colorQuaternary),
+  quaternary300: darken(0.2, colorMap.colorQuaternary),
+  quaternary200: darken(0.3, colorMap.colorQuaternary),
+  quaternary100: darken(0.4, colorMap.colorQuaternary),
+
+  gray900: lighten(0.1, colorMap.colorBlack),
+  gray800: lighten(0.2, colorMap.colorBlack),
+  gray700: lighten(0.3, colorMap.colorBlack),
+  gray600: lighten(0.4, colorMap.colorBlack),
+  gray500: lighten(0.5, colorMap.colorBlack),
+  gray400: lighten(0.6, colorMap.colorBlack),
+  gray300: lighten(0.7, colorMap.colorBlack),
+  gray200: lighten(0.8, colorMap.colorBlack),
+  gray100: lighten(0.9, colorMap.colorBlack),
+
+  black: colorMap.colorBlack,
+  white: colorMap.colorWhite,
 };
 
 /*-----------------------------------------------------------------------------
-  Theme variables
+  Fonts
 ------------------------------------------------------------------------------*/
-export default css`
-  --color-primary-900: ${darken(0.4, colorMap.colorPrimary)};
-  --color-primary-800: ${darken(0.3, colorMap.colorPrimary)};
-  --color-primary-700: ${darken(0.2, colorMap.colorPrimary)};
-  --color-primary-600: ${darken(0.1, colorMap.colorPrimary)};
-  --color-primary-500: ${colorMap.colorPrimary};
-  --color-primary-400: ${lighten(0.1, colorMap.colorPrimary)};
-  --color-primary-300: ${lighten(0.2, colorMap.colorPrimary)};
-  --color-primary-200: ${lighten(0.3, colorMap.colorPrimary)};
-  --color-primary-100: ${lighten(0.4, colorMap.colorPrimary)};
-
-  --color-secondary-900: ${darken(0.4, colorMap.colorSecondary)};
-  --color-secondary-800: ${darken(0.3, colorMap.colorSecondary)};
-  --color-secondary-700: ${darken(0.2, colorMap.colorSecondary)};
-  --color-secondary-600: ${darken(0.1, colorMap.colorSecondary)};
-  --color-secondary-500: ${colorMap.colorSecondary};
-  --color-secondary-400: ${lighten(0.1, colorMap.colorSecondary)};
-  --color-secondary-300: ${lighten(0.2, colorMap.colorSecondary)};
-  --color-secondary-200: ${lighten(0.3, colorMap.colorSecondary)};
-  --color-secondary-100: ${lighten(0.4, colorMap.colorSecondary)};
-
-  --color-tertiary-900: ${darken(0.4, colorMap.colorTertiary)};
-  --color-tertiary-800: ${darken(0.3, colorMap.colorTertiary)};
-  --color-tertiary-700: ${darken(0.2, colorMap.colorTertiary)};
-  --color-tertiary-600: ${darken(0.1, colorMap.colorTertiary)};
-  --color-tertiary-500: ${colorMap.colorTertiary};
-  --color-tertiary-400: ${lighten(0.1, colorMap.colorTertiary)};
-  --color-tertiary-300: ${lighten(0.2, colorMap.colorTertiary)};
-  --color-tertiary-200: ${lighten(0.3, colorMap.colorTertiary)};
-  --color-tertiary-100: ${lighten(0.4, colorMap.colorTertiary)};
-
-  --color-quaternary-900: ${lighten(0.4, colorMap.colorQuaternary)};
-  --color-quaternary-800: ${lighten(0.3, colorMap.colorQuaternary)};
-  --color-quaternary-700: ${lighten(0.2, colorMap.colorQuaternary)};
-  --color-quaternary-600: ${lighten(0.1, colorMap.colorQuaternary)};
-  --color-quaternary-500: ${colorMap.colorQuaternary};
-  --color-quaternary-400: ${darken(0.1, colorMap.colorQuaternary)};
-  --color-quaternary-300: ${darken(0.2, colorMap.colorQuaternary)};
-  --color-quaternary-200: ${darken(0.3, colorMap.colorQuaternary)};
-  --color-quaternary-100: ${darken(0.4, colorMap.colorQuaternary)};
-
-  --color-black: ${colorMap.colorBlack};
-
-  --color-gray-900: ${lighten(0.1, colorMap.colorBlack)};
-  --color-gray-800: ${lighten(0.2, colorMap.colorBlack)};
-  --color-gray-700: ${lighten(0.3, colorMap.colorBlack)};
-  --color-gray-600: ${lighten(0.4, colorMap.colorBlack)};
-  --color-gray-500: ${lighten(0.5, colorMap.colorBlack)};
-  --color-gray-400: ${lighten(0.6, colorMap.colorBlack)};
-  --color-gray-300: ${lighten(0.7, colorMap.colorBlack)};
-  --color-gray-200: ${lighten(0.8, colorMap.colorBlack)};
-  --color-gray-100: ${lighten(0.9, colorMap.colorBlack)};
-`;
+export const font = {
+  family: "'Manrope', sans-serif", // Included Google font(s) in gatsby-config.js
+  size: "16px",
+  weight: {
+    light: 200,
+    regular: 400,
+    bold: 600,
+    extraBold: 800,
+  },
+};
